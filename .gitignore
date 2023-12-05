@@ -1,0 +1,28 @@
+# Objectfiles
+objs/
+*.o
+
+# Libraries
+*.lib
+*.a
+
+## Mac OS X
+.DS_Store
+
+## Debug files
+build/
+
+error.log
+result.log
+
+## vscode
+.vscode/
+.vscode/*
+
+## others
+*.a
+a.out
+*.o
+*.swp
+
+ft_mini_ls

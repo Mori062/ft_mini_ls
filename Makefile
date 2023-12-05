@@ -1,6 +1,6 @@
 NAME = ft_mini_ls
 
-SRC = main.c
+SRC = main.c utils.c free.c
 
 SRCDIR = srcs
 SRCS = $(addprefix $(SRCDIR)/, $(SRC))
