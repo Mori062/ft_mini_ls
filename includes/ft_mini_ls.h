@@ -6,7 +6,7 @@
 /*   By: morishitashoto <morishitashoto@student.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/06 01:47:31 by morishitash       #+#    #+#             */
-/*   Updated: 2023/12/06 04:37:18 by morishitash      ###   ########.fr       */
+/*   Updated: 2023/12/06 04:49:47 by morishitash      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,7 @@ typedef struct s_file
 int		put_err(char *str);
 int		check_arg(int argc);
 int		count_files(void);
-void	put_list_segment(t_file *file);
+int		put_list_segment(t_file *files);
 t_file	*init_files(int files_num);
 void	free_files(t_file *file);
 

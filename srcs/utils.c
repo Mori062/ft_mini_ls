@@ -6,7 +6,7 @@
 /*   By: morishitashoto <morishitashoto@student.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/06 03:28:43 by morishitash       #+#    #+#             */
-/*   Updated: 2023/12/06 04:38:05 by morishitash      ###   ########.fr       */
+/*   Updated: 2023/12/06 04:49:32 by morishitash      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -87,7 +87,7 @@ int	count_files(void)
 	return (files_num);
 }
 
-void	put_list_segment(t_file *files)
+int	put_list_segment(t_file *files)
 {
 	DIR				*dir;
 	struct dirent	*entry;
@@ -103,6 +103,8 @@ void	put_list_segment(t_file *files)
 			continue ;
 		}
 		files->name = ft_strdup(entry->d_name);
+		if (files->name == NULL)
+			return (INVALID);
 		lstat(files->name, &stat);
 		files->tv_sec = stat.st_mtimespec.tv_sec;
 		files->tv_nsec = stat.st_mtimespec.tv_nsec;
@@ -110,4 +112,5 @@ void	put_list_segment(t_file *files)
 		entry = readdir(dir);
 	}
 	closedir(dir);
+	return (VALID);
 }

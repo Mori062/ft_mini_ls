@@ -6,8 +6,8 @@
       "type": "lldb",
       "request": "launch",
       "args": [],
-      "cwd": "/Users/morishitashoto/Downloads/.42tmp/cub3d",
-      "program": "/Users/morishitashoto/Downloads/.42tmp/cub3d/build/Debug/outDebug"
+      "cwd": "/Users/morishitashoto/Downloads/.42tmp/ft_mini_ls",
+      "program": "/Users/morishitashoto/Downloads/.42tmp/ft_mini_ls/build/Debug/outDebug"
     }
   ]
 }

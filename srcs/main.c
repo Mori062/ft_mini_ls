@@ -6,7 +6,7 @@
 /*   By: morishitashoto <morishitashoto@student.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/06 01:47:22 by morishitash       #+#    #+#             */
-/*   Updated: 2023/12/06 04:37:42 by morishitash      ###   ########.fr       */
+/*   Updated: 2023/12/06 04:51:21 by morishitash      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,7 +48,7 @@ void	sort_files(t_file *file)
 					swap_files(tmp, file);
 				else if (tmp->tv_nsec == file->tv_nsec)
 				{
-					if (ft_strcmp(tmp->name, file->name) > 0)
+					if (ft_strcmp(tmp->name, file->name) < 0)
 						swap_files(tmp, file);
 				}
 			}
@@ -76,8 +76,7 @@ int	main(int argc, char **argv)
 	if (check_arg(argc) == INVALID)
 		return (1);
 	files = init_files(count_files());
-	put_list_segment(files);
-	if (files == NULL)
+	if (put_list_segment(files) == INVALID || files == NULL)
 	{
 		free_files(files);
 		put_err("Error: Failed to allocate memory\n");
